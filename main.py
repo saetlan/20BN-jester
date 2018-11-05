@@ -109,9 +109,9 @@ def main(args):
                         validation_steps=ceil(nb_sample_val/batch_size),
                         shuffle=True,
                         verbose=1,
-                        workers=8,
-                        max_queue_size=20,
-                        use_multiprocessing=True,
+                        workers=workers,
+                        max_queue_size=max_queue_size,
+                        use_multiprocessing=use_multiprocessing,
                         callbacks=[checkpointer_best, history_graph],
         )
     elif mode == 'test':
@@ -136,8 +136,8 @@ def main(args):
                         generator=gen_test,
                         steps=ceil(nb_sample_test/batch_size),
                         verbose=1,
-                        workers=8,
-                        use_multiprocessing=True,
+                        workers=workers,
+                        use_multiprocessing=use_multiprocessing,
         )
 
         #Create an empty column called label
