@@ -18,5 +18,5 @@ python main.py --config "config.cfg"
 ```
 
 ## Comments
-My current best result is currently 85.99% top-1 accuracy. [20 BN jester leaderboard](https://20bn.com/datasets/jester/)
+My current best result is currently 85.99% top-1 accuracy on the [20 BN jester leaderboard](https://20bn.com/datasets/jester/).
 It was obtained by training a 3D version of ResNet101 with a dropout of 0.5 between each block. 
